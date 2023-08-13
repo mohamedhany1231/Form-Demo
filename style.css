@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+@font-face {
+  font-family: Norse-bold;
+  src: url(fonts/Norse-Bold.otf);
+}
+img {
+  height: 200px;
+}
+
+.main-content {
+  display: flex;
+  height: 100vh;
+}
+
+.left-sec {
+  height: 100%;
+  width: 40%;
+  background-image: url(images/seljalandsfoss-waterfall-during-sunset-beautiful-waterfall-iceland.jpg);
+  background-size: cover;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.25);
+  background-blend-mode: multiply;
+}
+
+.logo-div {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  width: 100%;
+  position: absolute;
+  top: 15%;
+}
+.logo-div h2 {
+  color: white;
+  font-family: Norse-bold;
+  font-weight: bold;
+  font-size: 5em;
+}
+.logo-div img {
+  height: 150px;
+  margin: 10px;
+  transform: translateY(-25px);
+}
+/* right section */
+.right-sec {
+  width: auto;
+  height: 100%;
+  padding: 8% 0;
+  background: #eee;
+}
+.right-sec .text {
+  padding: 0 10%;
+}
+.right-sec h2 {
+  width: 80%;
+  font-size: 1.5rem;
+  line-height: 1.1;
+}
+.right-sec h2 span {
+  display: block;
+  margin-top: 20px;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+/* form */
+.right-sec form {
+  width: calc(100%+50px);
+  margin-top: 60px;
+}
+.right-sec .inputs {
+  background-color: white;
+  padding: 30px 10%;
+  box-shadow: 0 5px 12px rgb(119, 119, 119);
+}
+.right-sec legend {
+  font-size: 2em;
+  font-weight: bolder;
+  margin-bottom: 30px;
+}
+
+.right-sec .inputs > div {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 10%;
+}
+.right-sec .inputs div.input {
+  width: 70%;
+  flex: 1;
+}
+.right-sec .inputs label {
+  display: block;
+  margin-bottom: 5px;
+  letter-spacing: 3px;
+  font-size: 1.2em;
+  transform: translateX(7px);
+}
+/* input */
+.right-sec .inputs input {
+  width: 100%;
+  height: 35px;
+  border-radius: 0.5em;
+  font-size: 1.5em;
+  padding: 10px;
+  border: 1px solid #5d7537;
+}
+
+.right-sec .inputs input:invalid {
+  outline: none;
+  border: rgb(255, 0, 0) 1px solid;
+}
+.right-sec .inputs input:focus {
+  outline: none;
+  border-color: rgb(0, 231, 231);
+  background-color: #eee;
+  box-shadow: 1px 1px 1px grey;
+}
+.right-sec .form-button {
+  padding: 40px 10%;
+}
+
+.right-sec form button {
+  background-color: #5d7537;
+  border-radius: 12px;
+  padding: 10px 50px;
+  color: white;
+  font-size: 1.7em;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.right-sec .form-button p {
+  margin-left: 5px;
+  font-size: 1.4em;
+}
+.right-sec .form-button p a {
+  text-decoration: none;
+  color: #5d7537;
+  font-weight: bolder;
+}
+
+/* password */
+.right-sec .inputs .error-pw input {
+  outline: none;
+  border: rgb(255, 0, 0) 1px solid;
+}
+.right-sec .inputs .error-pw {
+  position: relative;
+}
+.right-sec .inputs .error-pw::after {
+  content: "*password doesnt match*";
+  font-size: 16px;
+  color: red;
+  display: inline-block;
+  position: absolute;
+  bottom: -18px;
+  left: 10px;
+}

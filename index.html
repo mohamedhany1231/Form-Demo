@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main-content">
+      <div class="left-sec">
+        <div class="logo-div">
+          <img
+            src="./images/kisspng-health-care-women-s-health-woman-5b07c7c95d7df7.119400801527236553383.png"
+            alt="Health Logo"
+          />
+          <h2>HEALTH</h2>
+        </div>
+      </div>
+      <!-- right secion -->
+      <div class="right-sec">
+        <div class="text">
+          <h2>
+            This is not a real online service! you need you need something like
+            that in your life Lorem ipsum dolor sit, amet consectetur
+
+            <br />
+            Sign up <em>now</em> to get started
+            <span>you know you want to</span>
+          </h2>
+        </div>
+        <form action="">
+          <div class="inputs">
+            <legend>Let's Do This!</legend>
+            <div class="name">
+              <div class="input">
+                <label for="fname">First Name</label
+                ><input minlength="4" id="fname" type="text" />
+              </div>
+              <div class="input">
+                <label for="lname">Last Name</label
+                ><input minlength="4" id="lname" type="text" />
+              </div>
+            </div>
+            <div class="contanct">
+              <div class="input">
+                <label for="email">Email</label
+                ><input minlength="4" id="email" type="email" />
+              </div>
+              <div class="input">
+                <label for="phone">Phone number</label
+                ><input minlength="4" id="phone" type="number" />
+              </div>
+            </div>
+            <div class="password">
+              <div class="input">
+                <label for="pw">Password</label
+                ><input minlength="4" id="pw" type="password" />
+              </div>
+              <div class="input">
+                <label for="confirm-pw">Confirm Password</label
+                ><input minlength="4" id="confirm-pw" type="password" />
+              </div>
+            </div>
+          </div>
+          <div class="form-button">
+            <button>Create Account</button>
+            <p class="has-account">
+              Already have an account? <a href="">Log In</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script>
+    let pwInput = document.querySelector("#pw");
+    let pwConfirm = document.querySelector("#confirm-pw");
+    let passwordDiv = pwInput.parentElement.parentElement;
+    pwConfirm.addEventListener("change", () => {
+      console.log(pwInput.value);
+      console.log(pwInput);
+      console.log(pwConfirm.value);
+      console.log(pwConfirm);
+      if (pwInput.value == pwConfirm.value)
+        passwordDiv.classList.remove("error-pw");
+      else passwordDiv.classList.add("error-pw");
+    });
+  </script>
+</html>
