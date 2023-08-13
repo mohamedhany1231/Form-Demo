@@ -136,6 +136,11 @@ img {
   margin-bottom: 20px;
   font-weight: bold;
 }
+
+.right-sec form button:hover {
+  color: #5d7537;
+  background-color: aliceblue;
+}
 .right-sec .form-button p {
   margin-left: 5px;
   font-size: 1.4em;
